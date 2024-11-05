@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;  /* slate-900 */
+  --background-start-rgb: 248, 250, 252;  /* slate-50 */
+  --background-end-rgb: 255, 255, 255;  /* white */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      rgb(var(--background-start-rgb)),
+      rgb(var(--background-end-rgb))
+    )
+    fixed;
+}
+
+/* Basic typography styles */
+h1 {
+  color: #111827;  /* gray-900 */
+}
+
+h2, h3, h4, h5, h6 {
+  color: #1f2937;  /* gray-800 */
+}
+
+p {
+  color: #1f2937;  /* gray-800 */
+}
+
+a {
+  color: #2563eb;  /* blue-600 */
+}
+
+a:hover {
+  color: #1d4ed8;  /* blue-700 */
+}

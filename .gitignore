@@ -1,0 +1,6 @@
+/php/data
+node_modules
+*.sqlite
+*.db
+.env
+.next

@@ -1,7 +1,29 @@
 <?php
+define('SITE_TITLE', 'ToDo Wizard');
 
-require_once 'auth.php';
-require_once 'config.php';
+function getCurrentUser() {
+	$sessionToken = $_COOKIE['session_token'] ?? '';
+	return Database::db()->getUserBySessionToken($sessionToken);
+}
+
+function nav_link(string $href, string $text, string $classes = "nav-link"): string {
+	$current_page = $_SERVER['REQUEST_URI'];
+	
+	// Remove query parameters if they exist
+	$current_page = strtok($current_page, '?');
+	
+	// Add 'active' class if this is the current page
+	if ($current_page === $href) {
+		$classes .= " active";
+	}
+	
+	return sprintf(
+		'<a href="%s" class="%s">%s</a>',
+		htmlspecialchars($href),
+		htmlspecialchars($classes),
+		htmlspecialchars($text)
+	);
+}
+
 require_once 'db.php';
-require_once 'head.php';
-require_once 'util.php';
+require_once 'template.php';

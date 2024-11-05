@@ -6,5 +6,8 @@
   :maintainer "Ben <ben@wolkenwelten.net>"
   :description "Simple ToDo WebApp, trying to see how good LLMs are at writing Lisp"
   :serial T
-  :components ((:file "todo-wizard"))
-  :depends-on ())
+  :components (
+    (:file "todo-wizard")
+    (:file "page-content")
+    (:file "server"))
+  :depends-on (:hunchentoot))

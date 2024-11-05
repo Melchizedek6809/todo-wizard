@@ -1,0 +1,1 @@
+Kinda intrigued to see how well LLMs can write Common Lisp

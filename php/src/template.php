@@ -48,8 +48,6 @@ function output_user_panel($user) {
 	<?php
 }
 
-$user = getCurrentUser();
-
 function output_body_header() {
 	global $user;
 	?>

@@ -5,6 +5,7 @@ function getCurrentUser() {
 	$sessionToken = $_COOKIE['session_token'] ?? '';
 	return Database::db()->getUserBySessionToken($sessionToken);
 }
+$user = getCurrentUser();
 
 function nav_link(string $href, string $text, string $classes = "nav-link"): string {
 	$current_page = $_SERVER['REQUEST_URI'];
